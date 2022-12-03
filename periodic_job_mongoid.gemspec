@@ -14,7 +14,7 @@ Periodic Job helps you run jobs with a time interval between runs. You may have 
 EOS
   spec.homepage = "https://github.com/ynagorny/periodic_job_mongoid"
   spec.license = "MIT"
-  spec.required_ruby_version = ">= 3.1.2"
+  spec.required_ruby_version = ">= 2.7.6"
 
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/ynagorny/periodic_job_mongoid"

@@ -10,11 +10,11 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    name: Ruby ${{ matrix.ruby }}
+    name: Ruby ${{ matrix.ruby }}, MongoDB ${{ matrix.mongodb-version }}
     strategy:
       matrix:
-        ruby:
-          - '3.1.2'
+        ruby: ['2.7.6', '3.0.4', '3.1.2']
+        mongodb-version: ['4.2', '4.4', '5.0', '6.0']
 
     steps:
     - uses: actions/checkout@v3
@@ -23,5 +23,9 @@ jobs:
       with:
         ruby-version: ${{ matrix.ruby }}
         bundler-cache: true
+    - name: Start MongoDB
+      uses: supercharge/mongodb-github-action@1.8.0
+      with:
+        mongodb-version: ${{ matrix.mongodb-version }}
     - name: Run the default task
       run: bundle exec rake

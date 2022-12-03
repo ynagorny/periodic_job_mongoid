@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    periodic_job_mongoid (0.1.0)
+    periodic_job_mongoid (0.1.1)
       mongoid (~> 7.4)
 
 GEM
